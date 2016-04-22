@@ -1,0 +1,225 @@
+@charset "UTF-8";
+/* CSS Document */
+/*
+table {
+	font-family:Arial, Helvetica, sans-serif;
+	background-color:#F0F0F0;
+	border: 1px solid gold;
+	border-collapse: collapse;
+	padding:10px;
+	width:600px;
+
+}
+
+tr, td, th {
+	border: 1px solid black;
+	border-collapse: collapse;
+	padding:5px;
+	padding-left:10px;
+	height:50px;
+}*/
+
+body.left{
+	background-color:black;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color: white;
+	font-style:normal;
+	padding:5px;
+	padding-left:10px;
+	line-height: 300%;
+}
+
+body.right{
+	background-color:#F8F8F8;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-style:normal;
+	margin-left: 0px;
+	margin-top: 0px;
+	overflow-x: hidden;
+}
+
+form.formStyle1{
+
+	padding: 0px;
+}
+span.textstyle1{
+	color: gold;
+	font-weight: bold;
+}
+span.textstyleRed{
+	color: red;
+	font-weight: bold;
+}
+span.textstyleGold{
+	color: gold;
+	font-weight: bold;
+}
+span.textstyleDescription{
+	color: grey;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 10px;
+	text-shadow: none;
+	letter-spacing: normal;
+
+}	
+div.title1{
+	height: 30px;
+	background-color: #383838;
+	color: white;
+	width: 100%;
+	padding:5px;
+	padding-left:10px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	vertical-align: middle;
+	text-indent: 15px;
+	border-top: 1px solid white;
+	border-bottom: 2px solid black;
+}
+div.content1{
+	background-color: #F8F8F8;
+	color: 383838;
+	width: 100%;
+	padding:5px;
+	padding-left:10px;
+	font-size: 18px;
+	vertical-align: top;
+	text-indent: 15px;
+	font-family: Impact, Charcoal, sans-serif;
+	letter-spacing: 2px;
+}
+
+input[type="checkbox"] {
+    opacity:0;
+    height: 16px;
+    width: 17px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: none;
+}
+input[type="checkbox"] + label{
+    background:url('images/toggle_off-26.png') no-repeat;
+    height: 20px;
+    width: 30px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+input[type="checkbox"]:checked + label{
+    background:url('images/toggle_on-26.png') no-repeat;
+    height: 20px;
+    width: 30px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+/* START Check box style */
+	#ch{
+            display:none;
+        }
+	#ch + label{
+        display:inline-block;
+        width:20px;
+        height:20px;
+        border:1px solid #bcbcbc;
+        cursor:pointer;
+        background: #fff;
+        vertical-align: middle;;
+    }
+
+    #ch:checked + label:after{
+        position:relative;
+        top:-3px;
+        left:3px;
+        content: '\2714';
+        font-size:18px;
+    }
+/* END Check box style */
+.btn-style{
+	border : solid 0px #ffffff;
+	font-size : 16px;
+	color : black;
+	padding : 7px 20px;
+	background-color : gold;
+
+}
+.btn-style2{
+	border : solid 0px #ffffff;
+	font-size : 16px;
+	font-family: Impact, Charcoal, sans-serif;
+	color : black;
+	padding : 7px 20px;
+	background-color : gold;
+	width: 25%;
+	margin-left: 37px;
+3
+
+.dropbtn {
+
+    background-color: gold;
+	color:black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+	width:195px;
+}
+
+
+
+.dropdown {
+
+    position: relative;
+    display: inline-block;
+
+}
+
+
+
+.dropdown-content {
+
+    display: none;
+
+    position: absolute;
+
+    background-color: #f9f9f9;
+
+    min-width: 195px;
+
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	text-align:center;
+
+}
+
+
+
+.dropdown-content a {
+
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+
+}
+
+
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+
+
+.dropdown:hover .dropdown-content {
+
+    display: block;
+
+}
+
+
+
+.dropdown:hover .dropbtn {
+
+    background-color: black;
+	color:white;
+
+}
