@@ -232,11 +232,11 @@ if (!empty($_POST))
 		/* DATABASE INFO 
 			Change these values to use your own server (requires at least PHP 5)
 		*/
-		$dbHost = "10.200.8.60";
-		$dbName = "scripting";
-		$dbUser = "ikirk";
-		$dbPassword = "umbc";
-		$dbTable = "project1";
+		$dbHost = "162.243.228.9";
+		$dbName = "CS433";
+		$dbUser = "cs_student";
+		$dbPassword = "swordfish";
+		$dbTable = "project2";
 
 		// Create connection
 		$conn = new mysqli($dbHost, $dbUser, $dbPassword, $dbName);
