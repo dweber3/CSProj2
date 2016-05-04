@@ -322,7 +322,7 @@ function test_input($data) {
 
 	<form method="post" action="after.php" class="formStyle1" onSubmit="beforeSubmit();">
  			
-<div class="title1"><span class="textstyleRed">2XX</span> Lv. CLASSES</div>
+<div class="title1"><span class="textstyleRed">CMSC 2XX</span> Lv. CLASSES</div>
 
 
  			<div id='cmsc201' class='content1' class='content1' style="color: GoldenRod;" >
@@ -349,7 +349,7 @@ function test_input($data) {
 			<div id='cmsc299' class='content1' style="color: GoldenRod;">
 			<input type="checkbox" dependency='0' name="cmsc299" value="CMSC299" id="299" onclick="selected('cmsc299');"><label for="299"></label> CMSC 299 <span class="textstyleDescription">: (1.00 - 4.00) Independent Study in Computer Science </span> <br> </div>
 
-	<div class="title1"><span class="textstyleRed">3XX</span> Lv. CLASSES</div>
+	<div class="title1"><span class="textstyleRed">CMSC 3XX</span> Lv. CLASSES</div>
  		
 
  			<div id='cmsc304' class='content1' style="color: lightgrey;">
@@ -375,7 +375,7 @@ function test_input($data) {
 			<div id='cmsc391' class='content1' style="color: GoldenRod;">
 			<input type="checkbox" dependency='0' name="CMSC391" value="CMSC391" id="391" onclick="selected('cmsc391');"><label for="391"></label>  CMSC 391 <span class="textstyleDescription">: (1.00 - 4.00) Special Topics in Computer Science </span> <br></div> 
 	
-		<div class="title1"><span class="textstyleRed">4XX</span> Lv. CLASSES</div>
+		<div class="title1"><span class="textstyleRed">CMSC 4XX</span> Lv. CLASSES</div>
 
 				<div id='cmsc411' class='content1' style="color: lightgrey;">
 
