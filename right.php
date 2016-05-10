@@ -1,4 +1,6 @@
+
 <?php session_start(); ?>
+
 <!DOCTYPE html PUBLIC "-//W3C//Dbr XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/Dbr/xhtml1-transitional.dbr">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -181,7 +183,14 @@
 		}
 
 	}
+
+
+
 </script>
+
+
+
+
 
 
 <?php
@@ -229,14 +238,21 @@ if (!empty($_POST))
 
 	
 	if($valid) {
+		
 		/* DATABASE INFO 
 			Change these values to use your own server (requires at least PHP 5)
 		*/
-		$dbHost = "162.243.228.9";
+		// $dbHost = "162.243.228.9";
+		// $dbName = "CS433";
+		// $dbUser = "cs_student";
+		// $dbPassword = "swordfish";
+		// $dbTable = "temp";
+
+		$dbHost = "45.55.136.207";
 		$dbName = "CS433";
 		$dbUser = "cs_student";
-		$dbPassword = "swordfish";
-		$dbTable = "project2";
+		$dbPassword = "cs_student_proj2";
+		$dbTable = "cs_student";
 
 		// Create connection
 		$conn = new mysqli($dbHost, $dbUser, $dbPassword, $dbName);
@@ -294,8 +310,8 @@ if (!empty($_POST))
 
 		// Prints out a customized welcome message at the top of the page
 		$nameUpper = strtoupper($name);
-		echo "<br><div><center> WELCOME <span class='textstyleRed'>$nameUpper</span></center><br>";
-		
+		echo "<br><div><center> WELCOME <span class='textstyleRed'>$nameUpper</span><br>Please select classes you have already taken</center><br>";
+		//echo "Please select classes you have already taken<br>"
 		// Saves session variables for the next page, after.php
 		
 		$_SESSION["name"] = $name;
@@ -320,6 +336,8 @@ function test_input($data) {
 ?>
 
 
+
+
 	<form method="post" action="after.php" class="formStyle1" onSubmit="beforeSubmit();">
  			
 <div class="title1"><span class="textstyleRed">2XX</span> Lv. CLASSES</div>
@@ -337,7 +355,7 @@ function test_input($data) {
 
 			<div id='cmsc203' class='content1' style="color: lightgrey;">
 			<input type="checkbox" dependency='0' disabled name="CMSC203" value="CMSC203" id="203" onclick="selected('cmsc203');lockprev('cmsc202', 'cmsc203');showMe('cmsc313');showMe('cmsc331');showMe('cmsc457');showMe('cmsc452');showMe('cmsc451');showMe('cmsc341');"><label for="203"></label> 	CMSC 203 <span class="textstyleDescription">: (3.00) Discrete Structures </span> <br>
-</div>
+			</div>
 
 			<div id='cmsc232' class='content1' style="color: GoldenRod;">
 			<input type="checkbox" dependency='0' name="cmsc232" value="CMSC232" id="232" onclick="selected('cmsc232');"><label for="232"></label>  
@@ -506,6 +524,89 @@ function test_input($data) {
 				<div id='cmsc499' class='content1' style="color: GoldenRod;">
 				<input class="400-level-box" type="checkbox" dependency='0' name="CMSC499" value="CMSC499" id="499" onclick="selected('cmsc499');"><label for="499"></label>  CMSC 499 <span class="textstyleDescription">: (1.00 - 4.00) Independent Study in Computer Science </span> <br> </div> 
 		
+	<div class="title1"><span class="textstyleRed">Math</span> CLASSES</div>
+
+ 			<div id='math150' class='content1' class='content1' style="color: GoldenRod;" >
+			<input type="checkbox" dependency='0' name="MATH150" value="MATH150" id="150" onclick="selected('math150');showMe('biol141');showMe('chem101');showMe('math151');"><label for="150"></label>  MATH 150 
+			<span class="textstyleDescription">: (4.00) Precalculus Mathematics. Please check the checkbox if you got scored 5 on the LRC MATH placement exam</span>  <br></div>
+
+			<div id='math151' class='content1' style="color: lightgrey;">
+			<input type="checkbox" dependency='0' disabled name="MATH151" value="MATH151" id="151" onclick="selected('math151');lockprev('math150', 'math151');showMe('math152');showMe('math221');showMe('phys121')"><label for="151"></label>  MATH 151
+		    <span class="textstyleDescription">: (4.00) Calculus and Analytic Geometry I </span> <br> </div>
+
+		    <div id='math152' class='content1' style="color: lightgrey;">
+			<input type="checkbox" dependency='0' disabled name="MATH152" value="MATH152" id="152" onclick="selected('math152');lockprev('math151', 'math152');"><label for="152"></label>  MATH 152
+		    <span class="textstyleDescription">: (4.00) Calculus and Analytic Geometry II </span> <br> </div>
+
+		    <div id='math221' class='content1' style="color: lightgrey;">
+			<input type="checkbox" dependency='0' disabled name="MATH221" value="MATH221" id="221" onclick="selected('math221');lockprev('math151', 'math221');"><label for="221"></label>  MATH 221
+		    <span class="textstyleDescription">: (3.00)  Introduction to Linear Algebra</span> <br> </div>
+		
+	<div class="title1"><span class="textstyleRed">Science</span> CLASSES</div>
+
+			
+			<div id='phys121' class='content1' style="color: lightgrey;">
+			<input type="checkbox" dependency='0' disabled name="PHYS121" value="PHYS121" id="121" onclick="selected('phys121');lockprev('math151', 'phys121');showMe('phys122')"><label for="121"></label>  PHYS 121
+		    <span class="textstyleDescription">: (4.00) PHYS 121 - Introductory Physics I </span> <br> </div>
+
+		    <div id='phys122' class='content1' style="color: lightgrey;">
+			<input type="checkbox" dependency='0' disabled name="PHYS122" value="PHYS122" id="122" onclick="selected('phys122');lockprev('phys121', 'phys122');showMe('phys1221');"><label for="122"></label>  PHYS 122
+		    <span class="textstyleDescription">: (4.00) PHYS 121 - Introductory Physics II </span> <br> </div>
+
+		     <div id='phys1221' class='content1' style="color: lightgrey;">
+			<input type="checkbox" dependency='0' disabled name="PHYS122L" value="PHYS122L" id="1221" onclick="selected('phys1221');lockprev('phys122', 'phys1221');"><label for="1221"></label>  PHYS 122L
+		    <span class="textstyleDescription">: (3.00) Introductory Chemistry Lab IIntroductory Physics Laboratory </span> <br> </div>
+
+
+
+		    <div id='biol141' class='content1' style="color: lightgrey;">
+			<input type="checkbox" dependency='0' disabled name="BIOL141" value="BIOL141" id="141" onclick="selected('biol141');lockprev('math150', 'biol141');showMe('biol142')"><label for="141"></label>  BIOL 141
+		    <span class="textstyleDescription">: (4.00) Foundations of Biology: Cells, Energy and Organisms </span> <br> </div>
+
+ 			<div id='biol142' class='content1' style="color: lightgrey;">
+			<input type="checkbox" dependency='0' disabled name="BIOL142" value="BIOL142" id="142" onclick="selected('biol142');lockprev('biol141', 'biol142');showMe('biol1001')"><label for="142"></label>  BIOL 142  
+			 <span class="textstyleDescription">: (4.00)  Foundations of Biology: Ecology and Evolution </span> <br> </div>
+
+			 <div id='biol1001' class='content1' style="color: lightgrey;">
+			<input type="checkbox" dependency='0' disabled name="BIOL100L" value="BIOL100L" id="1001" onclick="selected('biol1001');lockprev('biol142', 'biol1001');"><label for="1001"></label>  BIOL 100L
+		    <span class="textstyleDescription">: (2.00) Concepts of Experimental Biology </span> <br> </div>
+			
+
+
+			<div id='chem101' class='content1' style="color: lightgrey;">
+			<input type="checkbox" dependency='0' disabled name="CHEM101" value="CHEM101" id="101" onclick="selected('chem101');lockprev('math150', 'chem101');showMe('chem102')"><label for="101"></label>  CHEM 101
+		    <span class="textstyleDescription">: (4.00) Principles of Chemistry I </span> <br> </div>
+	
+			<div id='chem102' class='content1' style="color: lightgrey;">
+			<input type="checkbox" dependency='0' disabled name="CHEM102" value="CHEM102" id="102" onclick="selected('chem102');lockprev('chem101', 'chem102');showMe('chem1021')"><label for="102"></label>  CHEM 102  
+			 <span class="textstyleDescription">: (4.00)  Principles of Chemistry II </span> <br> </div>
+
+			 <div id='chem1021' class='content1' style="color: lightgrey;">
+			<input type="checkbox" dependency='0' disabled name="CHEM102L" value="CHEM102L" id="1021" onclick="selected('chem1021');lockprev('chem102', 'chem1021');"><label for="1021"></label>  CHEM 102L
+		    <span class="textstyleDescription">: (2.00) Introductory Chemistry Lab I </span> <br> </div>
+		
+
+		    <div id='ges110' class='content1' class='content1' style="color: GoldenRod;" >
+			<input type="checkbox" dependency='0' name="GES110" value="GES110" id="110" onclick="selected('ges110');"><label for="110"></label>  GES 110 
+			<span class="textstyleDescription">: (3.00) Physical Geography </span>  <br></div>
+
+			<div id='ges120' class='content1' class='content1' style="color: GoldenRod;" >
+			<input type="checkbox" dependency='0' name="GES120" value="GES120" id="120" onclick="selected('ges120');"><label for="120"></label>  GES 120 
+			<span class="textstyleDescription">: (3.00)  Environmental Science and Conservation</span>  <br></div>
+
+
+			<div id='ges286' class='content1' class='content1' style="color: GoldenRod;" >
+			<input type="checkbox" dependency='0' name="GES286" value="GES286" id="286" onclick="selected('ges286');"><label for="286"></label> GES 286 
+			<span class="textstyleDescription">: (4.00)  – Introduction to the Environment: A Geo-Spatial Perspective</span>  <br></div>
+
+
+
+			<div id='sci1011' class='content1' class='content1' style="color: GoldenRod;" >
+			<input type="checkbox" dependency='0' name="SCI101L" value="SCI101L" id="1011" onclick="selected('sci1011');"><label for="1011"></label> SCI 101L
+			<span class="textstyleDescription">: (2.00)  Quantitative Reasoning: Measurement and Skills Lab</span>  <br></div>
+
+
+
 	</div> <br/>
 	<div class="title1"><span class="textstyleRed">
 		
@@ -517,7 +618,7 @@ function test_input($data) {
 
 	<script>
 	// Neat way to grab a php variable for javascript
-    var classes = "<?php Print($classes); ?>";
+    var classes = "";
     // Debug to check accuracy console.log(classes);
     var classArr = classes.split(" ");
 
