@@ -1,4 +1,3 @@
-
 <?php session_start(); ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//Dbr XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/Dbr/xhtml1-transitional.dbr">
