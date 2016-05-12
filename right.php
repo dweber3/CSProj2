@@ -1,5 +1,7 @@
-<?php session_start(); ?>
-
+<?php session_start(); 
+ini_set('display_errors',1);
+error_reporting(E_ALL);
+?>
 <!DOCTYPE html PUBLIC "-//W3C//Dbr XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/Dbr/xhtml1-transitional.dbr">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -617,8 +619,9 @@ function test_input($data) {
 
 	<script>
 	// Neat way to grab a php variable for javascript
-    var classes = "";
-    // Debug to check accuracy console.log(classes);
+    var classes = "<?php echo $classes ?>";
+    // Debug to check accuracy
+    console.log(classes);
     var classArr = classes.split(" ");
 
     // Loops through newly split class array to "click" each class in the interface
